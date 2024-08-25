@@ -54,25 +54,36 @@ class Solution:
             num_1 = sorted_nums[idx]
             if num_1>0:break
 
-            r=n_len-1
+            # r=n_len-1
             for l in range(idx+1,n_len-1):
                 if sorted_nums[l]==sorted_nums[l-1] and l>idx+1:
                     continue
 
                 # 参考答案版本
-                while r>l and sorted_nums[l]+sorted_nums[r]+num_1>0:
-                    r-=1
-                if r==l: break
+                # while r>l and sorted_nums[l]+sorted_nums[r]+num_1>0:
+                #     r-=1
+                # if r==l: break
 
-                if sorted_nums[l]+sorted_nums[r]+num_1==0:
-                    res.append([sorted_nums[l], sorted_nums[r], num_1])
+                # if sorted_nums[l]+sorted_nums[r]+num_1==0:
+                #     res.append([sorted_nums[l], sorted_nums[r], num_1])
 
                 
                 # for r in range(l+1,n_len)[::-1]:
-                #     if sorted_nums[l]+sorted_nums[r]+num_1==0:
-                #         res.append([sorted_nums[l], sorted_nums[r], num_1])
-                #         break
-                #     elif sorted_nums[l]+sorted_nums[r]+num_1 <0: break
+                r = n_len -1
+                while r>l and  sorted_nums[l]+sorted_nums[r]+num_1>=0:
+                    
+                    if r==l:break
+                # for r in range(n_len-1, l, -1):
+                    temp_num = sorted_nums[l]+sorted_nums[r]+num_1
+                   
+                    if temp_num==0:
+                        if [sorted_nums[l], sorted_nums[r], num_1] not in res:
+                            res.append([sorted_nums[l], sorted_nums[r], num_1])
+                    r-=1
+                        
+                    
+                    
+                    # elif temp_num <0: break
                     
         return res
 
