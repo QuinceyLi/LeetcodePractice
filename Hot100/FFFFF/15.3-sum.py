@@ -60,19 +60,19 @@ class Solution:
                     continue
 
                 # 参考答案版本
-                # while r>l and sorted_nums[l]+sorted_nums[r]+num_1>0:
-                #     r-=1
-                # if r==l: break
+                while r>l and sorted_nums[l]+sorted_nums[r]+num_1>0:
+                    r-=1
+                if r==l: break
 
-                # if sorted_nums[l]+sorted_nums[r]+num_1==0:
-                #     res.append([sorted_nums[l], sorted_nums[r], num_1])
+                if sorted_nums[l]+sorted_nums[r]+num_1==0:
+                    res.append([sorted_nums[l], sorted_nums[r], num_1])
 
                 
-                for r in range(l+1,n_len)[::-1]:
-                    if sorted_nums[l]+sorted_nums[r]+num_1==0:
-                        res.append([sorted_nums[l], sorted_nums[r], num_1])
-                        break
-                    elif sorted_nums[l]+sorted_nums[r]+num_1 <0: break
+                # for r in range(l+1,n_len)[::-1]:
+                #     if sorted_nums[l]+sorted_nums[r]+num_1==0:
+                #         res.append([sorted_nums[l], sorted_nums[r], num_1])
+                #         break
+                #     elif sorted_nums[l]+sorted_nums[r]+num_1 <0: break
                     
         return res
 
