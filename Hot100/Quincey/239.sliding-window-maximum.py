@@ -14,7 +14,7 @@ class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         # 数据结构学的是一坨答辩
         ans = []
-        q = deque()
+        q = deque() 
 
         for i,x in enumerate(nums):
             while q and nums[q[-1]] <= x:
