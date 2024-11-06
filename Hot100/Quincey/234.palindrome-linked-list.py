@@ -8,7 +8,7 @@ from typing import *
 # @lcpr version=30204
 #
 # [234] 回文链表
-#
+# 
 
 
 # @lcpr-template-start

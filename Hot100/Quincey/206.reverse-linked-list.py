@@ -25,7 +25,7 @@ class Solution:
         # while head.next:
         #     p1 = head
         #     while p1.next:
-        #         p2 = p1
+        #         p2 = p1 
         #         p1 = p1.next
         #     p1.next = p2
         #     p2.next = None
